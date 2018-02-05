@@ -1,0 +1,70 @@
+﻿@page "{id:int}"
+@model JOBSSys_0002.Pages.Pessoas.DetailsModel
+@{
+    ViewData["Title"] = "Detalhes";
+}
+<h2>Detalhes</h2>
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Endereco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Endereco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Cidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Cidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Telefone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Profissao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Profissao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.TaxaVisitacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.TaxaVisitacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Avaliacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Avaliacao)
+        </dd>
+    </dl>
+</div>
+<div>
+    @*<a asp-page="./Edit" asp-route-id="@Model.Pessoa.ID">Editar</a> |*@
+    <a asp-page="./Index">Voltar</a>
+</div>

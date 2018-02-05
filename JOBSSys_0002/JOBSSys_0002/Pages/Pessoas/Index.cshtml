@@ -1,0 +1,96 @@
+﻿@page "{id:int?}"
+@model JOBSSys_0002.Pages.Pessoas.IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+<h2>Lista</h2>
+<!--
+ <p>
+    <a asp-page="Create">Novo Cadastro</a>
+ </p>
+-->
+<form>
+    <p>
+        Cidade: <select asp-for="PessoaCidade" asp-items="Model.Cidades">
+            <option value="">Todas</option>
+        </select>
+
+        Profissão: <input type="text" name="searchString">
+        <input type="submit" value="Filtro" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoa[0].Nome)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoa[0].Cidade)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoa[0].Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoa[0].Profissao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoa[0].TaxaVisitacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoa[0].Avaliacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Pessoa)
+        {
+        <tr>
+            <td> 
+                <a asp-page="./Details" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.Nome)</a> 
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Endereco)
+        </td>
+            *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            @*
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+            *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            @*
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+<td>
+            @Html.DisplayFor(modelItem => item.Senha)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Profissao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxaVisitacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Avaliacao)
+            </td>
+            @*<td>
+            <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a> |
+            <a asp-page="./Details" asp-route-id="@item.ID">Detalhes</a> |
+            <a asp-page="./Delete" asp-route-id="@item.ID">Excluir</a>
+        </td>
+            *@
+        </tr>
+        }
+    </tbody>
+</table>

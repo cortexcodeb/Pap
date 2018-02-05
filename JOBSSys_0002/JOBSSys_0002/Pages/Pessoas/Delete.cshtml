@@ -1,0 +1,79 @@
+﻿@page "{id:int}"
+@model JOBSSys_0002.Pages.Pessoas.DeleteModel
+@{
+    ViewData["Title"] = "Excluir";
+}
+<h2>Excluir</h2>
+<h3>Você tem certeza que deseja excluir esse cadastro?</h3>
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Endereco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Endereco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Cidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Cidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Telefone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Senha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Senha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Profissao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Profissao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.TaxaVisitacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.TaxaVisitacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa.Avaliacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Avaliacao)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Pessoa.ID" />
+        <input type="submit" value="Excluir" class="btn btn-default" /> |
+        <a asp-page="./Index">Voltar</a>
+    </form>
+</div>
